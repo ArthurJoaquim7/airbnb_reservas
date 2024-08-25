@@ -5,14 +5,16 @@ import { EditarComponent } from './components/editar/editar.component';
 import { InicioComponent } from './components/inicio/inicio.component';
 
 const routes: Routes = [
-  { path: '', pathMatch: 'full', redirectTo: 'add-book' },
+  { path: '', pathMatch: 'full', redirectTo: 'inicio' },
   { path: 'listar', component: ListarComponent },
   { path: 'inicio', component: InicioComponent },
-  { path: 'editar/:id', component: EditarComponent},
+  { path: 'editar/:id', component: EditarComponent },
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  imports: [RouterModule.forRoot(routes),
+  ],
+  exports: [RouterModule,
+  ]
 })
 export class AppRoutingModule { }

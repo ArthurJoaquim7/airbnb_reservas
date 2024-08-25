@@ -15,7 +15,7 @@ export class InicioComponent implements OnInit {
   constructor(
     public formBuilder: FormBuilder,
     private router: Router,
-    ngZone: NgZone,
+    private ngZone: NgZone,
     private reservaService: ReservaService
   ) {
     this.reservaForm = this.formBuilder.group({
@@ -32,7 +32,7 @@ export class InicioComponent implements OnInit {
     this.reservaService.AddReserva(this.reservaForm.value)
       .subscribe(() => {
         console.log('Dados adicionados com sucesso')
-        this.NgZone.run(() => this.router.navigateByUrl('/reservas-list'))
+        this.ngZone.run(() => this.router.navigateByUrl('/listar'))
       }, (err) => {
         console.log(err)
       })

@@ -1,1 +1,6 @@
-<p>inicio works!</p>
+<form [formGroup]="reservaForm" (ngSubmit)="onSubmit()">
+    <input type="text" placeholder="Digite o título" formControlName="title" required>
+    <input type="text" placeholder="Digite o local" formControlName="where" required>
+    <input type="text" placeholder="Digite o preço" formControlName="price" required>
+    <button type="submit">Enviar</button>
+</form>

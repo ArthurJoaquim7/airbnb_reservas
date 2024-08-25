@@ -16,7 +16,7 @@ export class ReservaService {
   constructor(private httpClient: HttpClient) { }
 
   AddReserva(data: Reserva): Observable<any> {
-    let API_URL = this.REST_API;
+    let API_URL = `${this.REST_API}`;
     return this.httpClient.post(API_URL, data).pipe(catchError(this.handleError))
   }
 
