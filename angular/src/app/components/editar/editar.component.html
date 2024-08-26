@@ -1,1 +1,6 @@
-<p>editar works!</p>
+<form [formGroup]="updateForm" (ngSubmit)="onUpdate()">
+    <input type="text" formControlName="title" required>
+    <input type="text" placeholder="Digite o local" formControlName="where" required>
+    <input type="text" placeholder="Digite o preço" formControlName="price" required>
+    <button type="submit">Editar</button>
+</form>

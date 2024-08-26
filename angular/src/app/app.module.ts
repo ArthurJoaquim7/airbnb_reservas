@@ -9,6 +9,7 @@ import { AppComponent } from './app.component';
 import { InicioComponent } from './components/inicio/inicio.component';
 import { EditarComponent } from './components/editar/editar.component';
 import { ListarComponent } from './components/listar/listar.component';
+import { DetalhesComponent } from './components/detalhes/detalhes.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { ListarComponent } from './components/listar/listar.component';
     InicioComponent,
     EditarComponent,
     ListarComponent,
+    DetalhesComponent,
   ],
   imports: [
     BrowserModule,

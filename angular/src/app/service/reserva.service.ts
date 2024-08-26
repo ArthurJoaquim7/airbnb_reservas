@@ -26,7 +26,7 @@ export class ReservaService {
 
   getReserva(id: any): Observable<any> {
     let API_URL = `${this.REST_API}/${id}`;
-    return this.httpClient.post(API_URL, { headers: this.httpHeaders })
+    return this.httpClient.get(API_URL, { headers: this.httpHeaders })
       .pipe(map((res: any) => {
         return res || {}
       }),
@@ -36,6 +36,12 @@ export class ReservaService {
   updateReserva(id: any, data: Reserva): Observable<any> {
     let API_URL = `${this.REST_API}/${id}`;
     return this.httpClient.put(API_URL, data, { headers: this.httpHeaders })
+      .pipe(catchError(this.handleError))
+  }
+
+  deleteReserva(id: any): Observable<any> {
+    let API_URL = `${this.REST_API}/${id}`;
+    return this.httpClient.delete(API_URL, { headers: this.httpHeaders })
       .pipe(catchError(this.handleError))
   }
 
