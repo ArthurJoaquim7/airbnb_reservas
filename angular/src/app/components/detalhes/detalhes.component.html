@@ -1,1 +1,6 @@
-<h1>Detalhes</h1>
+<div *ngFor="let reserva of Reservas; let i= index" style="display: flex; gap: 10px">
+    <p>{{reserva.id}}</p>
+    <p>{{reserva.title}}</p>
+    <p>{{reserva.where}}</p>
+    <p>{{reserva.price}}</p>
+</div>

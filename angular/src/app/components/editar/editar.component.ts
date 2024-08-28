@@ -15,7 +15,6 @@ export class EditarComponent implements OnInit {
   updateForm: FormGroup;
 
   constructor(
-
     public formBuilder: FormBuilder,
     private router: Router,
     private activateRoute: ActivatedRoute,
