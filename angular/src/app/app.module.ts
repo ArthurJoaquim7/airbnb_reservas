@@ -4,26 +4,30 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 
+// PRIMENG
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CarouselModule } from 'primeng/carousel';
+
 
 import { AppComponent } from './app.component';
-import { InicioComponent } from './components/inicio/inicio.component';
-import { EditarComponent } from './components/editar/editar.component';
 import { ListarComponent } from './components/listar/listar.component';
-import { DetalhesComponent } from './components/detalhes/detalhes.component';
+import { HeaderComponent } from './components/header/header.component';
+import { FilterComponent } from './components/filter/filter.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    InicioComponent,
-    EditarComponent,
     ListarComponent,
-    DetalhesComponent,
+    HeaderComponent,
+    FilterComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    CarouselModule,
   ],
   exports: [ReactiveFormsModule],
   providers: [],

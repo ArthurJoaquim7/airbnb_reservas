@@ -1,6 +1,6 @@
 export class Reserva {
-    id!: String;
+    id!: Number;
     title!: String;
-    where!: String;
-    price!: String;
+    where!: Text;
+    price!: Number;
 }
