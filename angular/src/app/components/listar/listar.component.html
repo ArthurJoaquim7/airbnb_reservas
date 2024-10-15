@@ -1,7 +1,23 @@
 <div *ngFor="let reserva of Reservas; let i= index" style="display: flex; gap: 10px">
-    <p>{{reserva.id}}</p>
-    <p>{{reserva.title}}</p>
-    <p>{{reserva.where}}</p>
-    <p>{{reserva.price}}</p>
-    <button (click)="delete(reserva.id,i)">Deletar</button>
+    <!-- <p>{{reserva.id}}</p>
+        <p>{{reserva.title}}</p>
+        <p>{{reserva.where}}</p>
+        <p>{{reserva.price}}</p>
+        <button (click)="delete(reserva.id,i)">Deletar</button> 
+ -->
 </div>
+
+<!-- <div *ngFor="let reserva of Reservas" class="divdiv">
+    <p-carousel [value]="Reservas" [numVisible]="5" [numScroll]="3" [circular]="false"
+        [responsiveOptions]="responsiveOptions">
+        <ng-template let-reserva pTemplate="item">
+            <div class="product-item">
+                <div class="product-item-content">
+                    <div class="mb-3">
+                        <img src="/assets/airbnb.png" [alt]="reserva.title" class="product-image">
+                    </div>
+                </div>
+            </div>
+        </ng-template>
+    </p-carousel>
+</div> -->

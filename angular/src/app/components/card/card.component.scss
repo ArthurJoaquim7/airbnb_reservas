@@ -1,0 +1,25 @@
+.container {
+    width: 100%;
+    padding: 20px 50px;
+}
+
+.cardDiv {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    column-gap: 10px;
+    row-gap: 20px;
+    // display: flex;
+    // align-items: center;
+    // justify-content: center;
+    // flex-wrap: wrap;
+    // gap: 30px;
+}
+
+
+.cardImg {
+    width: 280px;
+    height: 280px;
+    border-radius: 15px;
+}
